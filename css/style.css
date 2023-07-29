@@ -408,7 +408,7 @@ pre:hover::-webkit-scrollbar-thumb:hover,
   list-style: none;
 }
 #l_side .side_toc .content .toc-main .toc-content li:before {
-  content: '·';
+  content: ;
 }
 #l_side .side_toc .content .toc-main .toc-content a:hover {
   color: rgba(66,185,133,0.8);
