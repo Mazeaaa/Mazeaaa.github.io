@@ -415,18 +415,18 @@
     <article class="post post-detail">
       <div class="post-content">
         <p>id卡不会存储数据和加密，只有一个校验卡号，同时应确保门禁是id&#x2F;ic二合一，否则就算添加到手机&#x2F;手环NFC也不能读取。</p>
-<h2 id="一、获取卡号"><a href="#一、获取卡号" class="headerlink" title="一、获取卡号"></a>一、获取卡号</h2><p>首先确定你的卡是id卡，一般id卡上面有一串十位数卡号，获取卡号，保留备用。</p>
-<h2 id="二、转换卡号"><a href="#二、转换卡号" class="headerlink" title="二、转换卡号"></a>二、转换卡号</h2><p>将刚才的十位数卡号（十进制）转换成十六进制，例如：</p>
+<h1 id="一、获取卡号"><a href="#一、获取卡号" class="headerlink" title="一、获取卡号"></a>一、获取卡号</h1><p>首先确定你的卡是id卡，一般id卡上面有一串十位数卡号，获取卡号，保留备用。</p>
+<h1 id="二、转换卡号"><a href="#二、转换卡号" class="headerlink" title="二、转换卡号"></a>二、转换卡号</h1><p>将刚才的十位数卡号（十进制）转换成十六进制，例如：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">十进制：0007954860</span><br><span class="line">十六进制：007961AC</span><br></pre></td></tr></table></figure>
 
-<h2 id="三、逆序卡号"><a href="#三、逆序卡号" class="headerlink" title="三、逆序卡号"></a>三、逆序卡号</h2><p>两位数两位数一组，00 79 61 AC，将其逆序排列，例如：</p>
+<h1 id="三、逆序卡号"><a href="#三、逆序卡号" class="headerlink" title="三、逆序卡号"></a>三、逆序卡号</h1><p>两位数两位数一组，00 79 61 AC，将其逆序排列，例如：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">十六进制：007961AC</span><br><span class="line">逆序值：AC617900</span><br></pre></td></tr></table></figure>
 
-<h2 id="四、异或取值"><a href="#四、异或取值" class="headerlink" title="四、异或取值"></a>四、异或取值</h2><p>找一个在线BCC校验（异或校验）在线网站，获取校验计算结果（Hex），例如</p>
+<h1 id="四、异或取值"><a href="#四、异或取值" class="headerlink" title="四、异或取值"></a>四、异或取值</h1><p>找一个在线BCC校验（异或校验）在线网站，获取校验计算结果（Hex），例如</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">逆序值：AC617900</span><br><span class="line">校验计算结果（Hex）：B4</span><br></pre></td></tr></table></figure>
 
 <p>将校验结果添加在十六进制卡号后面，即<code>AC617900B4</code></p>
-<h2 id="五、写入NFC"><a href="#五、写入NFC" class="headerlink" title="五、写入NFC"></a>五、写入NFC</h2><p>将刚才准备的卡号<code>AC617900B4</code>写入ic卡0扇区前几位，门禁实体卡即制作成功，最后我们需要用手机&#x2F;手环写入空白钥匙，读取刚才制作好的ic门禁卡，此时便大功告成，可以使用手机&#x2F;手环去扫门禁了。</p>
+<h1 id="五、写入NFC"><a href="#五、写入NFC" class="headerlink" title="五、写入NFC"></a>五、写入NFC</h1><p>将刚才准备的卡号<code>AC617900B4</code>写入ic卡0扇区前几位，门禁实体卡即制作成功，最后我们需要用手机&#x2F;手环写入空白钥匙，读取刚才制作好的ic门禁卡，此时便大功告成，可以使用手机&#x2F;手环去扫门禁了。</p>
 
       </div>
       <div class="post-tags-categories">
@@ -693,7 +693,7 @@
   <div class='content'>
     <div class="toc-main">
       <div class="toc-content">
-        <!-- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E8%8E%B7%E5%8F%96%E5%8D%A1%E5%8F%B7"><span class="toc-text">一、获取卡号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E8%BD%AC%E6%8D%A2%E5%8D%A1%E5%8F%B7"><span class="toc-text">二、转换卡号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E9%80%86%E5%BA%8F%E5%8D%A1%E5%8F%B7"><span class="toc-text">三、逆序卡号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%BC%82%E6%88%96%E5%8F%96%E5%80%BC"><span class="toc-text">四、异或取值</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E5%86%99%E5%85%A5NFC"><span class="toc-text">五、写入NFC</span></a></li></ol> -->
+        <!-- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E8%8E%B7%E5%8F%96%E5%8D%A1%E5%8F%B7"><span class="toc-text">一、获取卡号</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E8%BD%AC%E6%8D%A2%E5%8D%A1%E5%8F%B7"><span class="toc-text">二、转换卡号</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E9%80%86%E5%BA%8F%E5%8D%A1%E5%8F%B7"><span class="toc-text">三、逆序卡号</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%BC%82%E6%88%96%E5%8F%96%E5%80%BC"><span class="toc-text">四、异或取值</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E5%86%99%E5%85%A5NFC"><span class="toc-text">五、写入NFC</span></a></li></ol> -->
         <div class="toc"></div>
       </div>
     </div>
